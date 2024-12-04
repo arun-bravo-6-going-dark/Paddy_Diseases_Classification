@@ -100,7 +100,7 @@ Use these visual symptoms to classify and identify the specific disease affectin
 st.set_page_config(layout="wide")
 st.title("🌾🔍 Paddy Diseases Classification 🌾🔍")
 
-st.subheader("Classification for Paddy Diseases: Blast, False Smut, and Boron Deficiency Only ", divider="gray")
+st.subheader("Classification for Paddy Diseases: Leaf Scald, False Smut, and Boron Deficiency Only ", divider="gray")
 
 api_key = st.secrets["openai_api_key"]
 
