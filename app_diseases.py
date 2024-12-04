@@ -44,6 +44,7 @@ def classify_image(base64_image, api_key):
 3. Boron Deficiency:
 - Reduced plant height.
 - Leaf tips become white in colour and rolled.
+4. Others/NA: When the provided image does not fall under any of the above three categories.
 
 You should also provide the farmer with next steps to deal with this Paddy disease in two sentences.
 
