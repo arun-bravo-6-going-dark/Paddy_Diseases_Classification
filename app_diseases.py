@@ -24,51 +24,26 @@ def classify_image(base64_image, api_key):
     }
     
     sys_prompt = """Analyze the provided images of rice plants and identify the presence of the following diseases based on the visual symptoms described:
-1. Leaf Scald:
-- Elaborate Symptoms:
-  - Initial symptoms appear as long, irregular, water-soaked streaks or lesions on the leaf blade.
-  - Lesions are light brown to grayish with yellowish margins, often starting at the tip or edges of the leaves and progressing downward.
-  - As the disease advances, the lesions dry out, turning whitish-gray or light tan, giving the leaf a "scorched" or "burnt" appearance.
-  - In severe cases, individual lesions merge to cover large portions of the leaf blade, causing partial or total drying.
-  - The affected leaves wilt, droop, and appear as if suffering from water stress or drought.
-  - The disease thrives in warm, humid climates, particularly where poor drainage or prolonged wetness is present.
-  - Severe infections can cause significant damage to the crop by reducing photosynthesis.
-
-- Similar Symptoms to Differentiate:
-  - Brown Spot: Smaller, circular lesions with distinct brown centers and yellow halos. Lesions do not give the leaf a scorched appearance.
-  - Bacterial Leaf Blight (BLB): Yellow streaks originating from the leaf margins, spreading downward with a wet, water-soaked appearance initially.
-  - Blast Disease: Spindle-shaped lesions with gray centers and dark brown borders, often smaller and not irregular in shape.
-
+1. Blast:
+- Initial symptoms are white to gray-green lesions or spots with brown borders
+- Small specks originate on leaves - subsequently enlarge into spindle shaped spots(0.5 to 1.5cm length, 0.3 to 0.5cm width) with ashy center.  
+- Older lesions are elliptical or spindle-shaped and whitish to gray with necrotic borders.
+- Big irregular patches on leaf.
+- Internodal infection also occurs at the base of the plant which causes white panicles similar to that induced by yellow stem borer or water deficit.
+- Lesions on the neck are grayish brown and causes the girdling of the neck and the panicle to fall over.
+- Lesions on the branches of the panicles and on the spikelet pedicels are brown to dark brown.
 2. False Smut:
-- Elaborate Symptoms:
-  - Individual rice grains are transformed into masses of yellowish or greenish smut balls.
-  - Velvetty fungal spores grow on the surface of the infected grains and often enclose the floral parts.
-  - Early infections produce small smut balls, but these grow gradually, reaching up to 1 cm in size.
-  - Smut balls first appear greenish-yellow and later change to orange, yellowish-green, or even greenish-black as they mature.
-  - The disease primarily affects a few grains within a panicle, leaving the remaining grains unaffected.
-  - As fungal growth intensifies, the smut balls burst, releasing spores that can spread the disease further.
-  - Infection occurs during the reproductive and ripening stages of the crop, significantly reducing grain quality.
-  - False Smut does not cause complete panicle sterility but impacts marketability and quality of the grain.
-
-- Similar Symptoms to Differentiate:
-  - Kernel Smut: A black powdery mass develops on infected grains, not velvetty smut balls. The disease affects multiple grains more uniformly.
-  - Grain Discoloration (Bacterial or Fungal): Infected grains turn brown or black but do not develop ball-like structures.
-  - Blast (Neck Rot Stage): Causes neck girdling, leading to a complete failure of grain development and white, empty panicles.
-
+- Individual rice grain transformed into a mass of yellow fruiting bodies
+- Growth of velvetty spores that enclose floral parts
+- Infected grain has greenish smut balls with a velvetty appearance.
+- The smut ball appears small at first and grows gradually up to the size of 1 cm.
+- It is seen in between the hulls and encloses the floral parts.
+- Only few grains in a panicle are usually infected and the rest are normal.
+- As the fungi growth intensifies, the smut ball bursts and becomes orange then later yellowish-green or greenish-black in color.
+- Infection usually occurs during the reproductive and ripening stages, infecting a few grains in the panicle and leaving the rest healthy.
 3. Boron Deficiency:
-- Elaborate Symptoms:
-  - Affected plants exhibit stunted growth, resulting in reduced plant height.
-  - Leaf tip discoloration is one of the first symptoms, where tips turn white and appear dried out.
-  - Leaves may also become rolled, distorted, or show signs of brittleness.
-  - Boron deficiency affects the overall structural development of the plant, particularly in young, growing tissues.
-  - If left unaddressed, symptoms can progress to reduced tillering, poor grain filling, and low yields.
-  - Boron deficiency is often associated with sandy soils, acidic soils, or areas where excessive irrigation leaches out nutrients.
-
-- Similar Symptoms to Differentiate:
-  - Nitrogen Deficiency: Causes pale green or yellowing of the entire leaf, not just the tips, along with poor growth.
-  - Potassium Deficiency: Causes yellowing and browning along the edges (margins) of the leaves rather than at the tips.
-  - Bacterial Leaf Blight: Leads to yellow streaks progressing to brown lesions along the margins and downward drying of the leaves, not specific white discoloration at the tips.
-
+- Reduced plant height.
+- Leaf tips become white in colour and rolled.
 4. Others/NA:
 - When the provided image does not fall under any of the above three categories.  
 - No next steps will be provided in this case.
