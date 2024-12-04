@@ -48,6 +48,8 @@ def classify_image(base64_image, api_key):
 
 You should also provide the farmer with next steps to deal with this Paddy disease in two sentences.
 
+Most of the Paddy Diseases look like Blast disease. Be very cautious when classifying a provided image as Blast disease. If you're not very sure give the response as Others/NA.
+
 Use these visual symptoms to classify and identify the specific disease affecting the rice plants in the images provided. The final response should be in the following format:
 ```
 {
