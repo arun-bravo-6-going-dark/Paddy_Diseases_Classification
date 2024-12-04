@@ -24,29 +24,22 @@ def classify_image(base64_image, api_key):
     }
     
     sys_prompt = """Analyze the provided images of rice plants and identify the presence of the following diseases based on the visual symptoms described:
-1. Blast:
-- Initial symptoms are white to gray-green lesions or spots with brown borders
-- Small specks originate on leaves - subsequently enlarge into spindle shaped spots(0.5 to 1.5cm length, 0.3 to 0.5cm width) with ashy center.  
-- Older lesions are elliptical or spindle-shaped and whitish to gray with necrotic borders.
-- Big irregular patches on leaf.
-- Internodal infection also occurs at the base of the plant which causes white panicles similar to that induced by yellow stem borer or water deficit.
-- Lesions on the neck are grayish brown and causes the girdling of the neck and the panicle to fall over.
-- Lesions on the branches of the panicles and on the spikelet pedicels are brown to dark brown.
+1. Leaf Scald:
+   - Long, irregular, water-soaked streaks or lesions that dry into a whitish-gray, "scorched" appearance.
+   - Lesions start at leaf tips or edges and progress downward.
+   - Leaves appear wilted or drought-affected in severe cases.
+
 2. False Smut:
-- Individual rice grain transformed into a mass of yellow fruiting bodies
-- Growth of velvetty spores that enclose floral parts
-- Infected grain has greenish smut balls with a velvetty appearance.
-- The smut ball appears small at first and grows gradually up to the size of 1 cm.
-- It is seen in between the hulls and encloses the floral parts.
-- Only few grains in a panicle are usually infected and the rest are normal.
-- As the fungi growth intensifies, the smut ball bursts and becomes orange then later yellowish-green or greenish-black in color.
-- Infection usually occurs during the reproductive and ripening stages, infecting a few grains in the panicle and leaving the rest healthy.
+   - Grain transformed into greenish-yellow smut balls with a velvetty appearance.
+   - Smut balls grow up to 1 cm, burst into orange or greenish-black spore masses.
+   - Only a few grains in a panicle are affected, others remain normal.
+
 3. Boron Deficiency:
-- Reduced plant height.
-- Leaf tips become white in colour and rolled.
+   - White discoloration and rolling of leaf tips.
+   - Reduced plant height and stunted growth.
+
 4. Others/NA:
-- When the provided image does not fall under any of the above three categories.  
-- No next steps will be provided in this case.
+   - When the provided image does not clearly match the above conditions.
 
 You should also provide the farmer with next steps to deal with this Paddy disease in two sentences.
 
